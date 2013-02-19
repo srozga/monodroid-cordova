@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{009F8C42-16DB-43BD-BB13-28A2B79F1A42}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rozga.MonoDroid.PluginSample</RootNamespace>
+    <AssemblyName>Rozga.MonoDroid.PluginSample</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CordovaActivity.cs" />
+    <Compile Include="Plugins\SamplePlugin.cs" />
+    <Compile Include="Plugins\XamarinCordovaPlugin.cs" />
+    <Compile Include="Plugins\XamarinCordovaPluginEntry.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\lib\jasmine-1.2.0\MIT.LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rozga.Cordova.Bindings\Rozga.Cordova.Bindings.csproj">
+      <Project>{6ed68bf8-19b5-4ada-8ad0-1752e8a558c6}</Project>
+      <Name>Rozga.Cordova.Bindings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Xml\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\cordova-2.4.0.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\master.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\css\index.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\img\cordova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\js\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\icon\android\icon-36-ldpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\icon\android\icon-48-mdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\icon\android\icon-72-hdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\icon\android\icon-96-xhdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-hdpi-landscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-hdpi-portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-ldpi-landscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-ldpi-portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-mdpi-landscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-mdpi-portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-xhdpi-landscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\res\screen\android\screen-xhdpi-portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\helper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\lib\jasmine-1.2.0\jasmine-html.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\lib\jasmine-1.2.0\jasmine.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\spec\lib\jasmine-1.2.0\jasmine.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\www\js\sample.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
