@@ -9,7 +9,10 @@ Rozga = {
                     callback(result);
                 },
                 function() {},
-                'Sample', 'test', [1,2,3]);
+                'Sample', // service
+                'test', // action
+                [1, 2, 3] // params
+            );
         }
     }
 };
